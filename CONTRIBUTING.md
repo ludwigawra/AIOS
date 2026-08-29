@@ -39,7 +39,7 @@ A skill is a named behavior Claude can invoke. Each skill lives in `plugin/skill
 **Process:**
 
 1. Open an issue proposing the skill. Describe the trigger, the inputs, the outputs, and the brain regions it touches.
-2. Create `plugin/skills/<skill-name>/SKILL.md` following the format of existing skills (start with `memory-search` or `morning-briefing` as references).
+2. Create `plugin/skills/<skill-name>/SKILL.md` following the format of existing skills (start with `memory-search` or `reflect` as references).
 3. Add an entry to `docs/skills.md`.
 4. If the skill produces files, add any templates to `plugin/templates/`.
 5. Submit a PR with an example invocation in the description.

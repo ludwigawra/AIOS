@@ -187,15 +187,15 @@ For each directory inside `plugin/skills/optional/`, read its `SKILL.md` frontma
 
 | Skill | Requires |
 |---|---|
-| `morning-briefing` | `gmail` AND `gcal` |
-| `email-triage` | `gmail` |
 | `meeting-prep` | `gcal` |
 | `relationship-check` | at least one of `gmail`, `whatsapp`, `slack`, `notion` |
 | `project-status` | no gate — always install |
-| `brain-dump-content` | install if `user.pillars` is non-empty OR `user.use_case == "creator"` |
-| `content-interview` | install if `user.pillars` is non-empty OR `user.use_case == "creator"` |
 
-Skills that fail their gate are silently skipped. Later, if the user connects a new integration, they can run `/aios-update` (future skill) to install the now-eligible ones.
+Only install skills that exist in `plugin/skills/optional/`. Never tell the user a skill was
+installed unless the directory was actually copied. If a routine they want does not ship here,
+point them at `/forge-skill` and offer to build it against their setup.
+
+Skills that fail their gate are silently skipped. Later, if the user connects a new integration, they can run `/aios-update` to install the now-eligible ones.
 
 ### 4.4 — Hook wiring (handled by the plugin, not by you)
 

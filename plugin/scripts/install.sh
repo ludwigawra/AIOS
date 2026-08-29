@@ -133,6 +133,10 @@ done < <(find "$PLUGIN_ROOT/templates" -type f -print0)
 echo "installing skills"
 mkdir -p "$TARGET/.claude/skills"
 cp -R "$PLUGIN_ROOT/skills/aios-start" "$TARGET/.claude/skills/"
+# Meta skills ship for everyone: help, explore, update, and the skill builder
+for meta in aios-help aios-explore aios-update forge-skill; do
+  [[ -d "$PLUGIN_ROOT/skills/$meta" ]] && cp -R "$PLUGIN_ROOT/skills/$meta" "$TARGET/.claude/skills/"
+done
 # Core skills are always installed
 cp -R "$PLUGIN_ROOT/skills/core" "$TARGET/.claude/skills/"
 
@@ -155,12 +159,8 @@ install_optional() {
   echo "  opt-in: $name (requires: $required)"
 }
 # Register as optional skills are added:
-install_optional "morning-briefing" "gmail gcal"
-install_optional "email-triage" "gmail"
 install_optional "meeting-prep" "gcal"
 install_optional "relationship-check" ""
-install_optional "brain-dump-content" ""
-install_optional "content-interview" ""
 
 # --- copy hooks ---
 echo "installing hooks"

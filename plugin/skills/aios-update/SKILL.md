@@ -26,7 +26,7 @@ The caller may provide:
 
 - **Mode** — `diff` (default, read-only report), `apply` (execute the update with a confirmation per conflict), or `apply-all` (execute non-interactively — used only when the user explicitly wants to skip the per-conflict prompt)
 - **Scope** — `all` (default), or a specific area: `skills`, `hooks`, `templates`, `settings`
-- **Skill filter** — optional list of skill names to restrict the update to (e.g. `--only morning-briefing,reflect`)
+- **Skill filter** — optional list of skill names to restrict the update to (e.g. `--only reflect,foresight`)
 
 ## Process
 

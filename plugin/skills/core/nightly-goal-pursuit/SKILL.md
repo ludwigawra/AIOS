@@ -22,7 +22,7 @@ Invoke this skill when any of the following apply:
 
 Do not invoke when:
 
-- It's morning (use `morning-briefing` or `foresight` instead — those read the output of this skill)
+- It's morning (use `foresight` instead — it reads the output of this skill)
 - The user needs an interactive conversation (this skill produces a file, not a chat)
 - No goals exist yet in `system/context/goals-metrics.md` (flag to the user and stop)
 

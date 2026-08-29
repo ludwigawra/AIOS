@@ -29,4 +29,4 @@ All placeholders are 1600x900 (16:9). If replacing with real captures, keep the 
 
 ## Regenerating placeholders
 
-The generator script lives inline in the commit that added this folder. To regenerate, run PIL-based Python with the palette above. Prefer capturing real screenshots once the dashboard and morning-briefing flows are stable.
+The generator script lives inline in the commit that added this folder. To regenerate, run PIL-based Python with the palette above. Prefer capturing real screenshots from a live install seeded with demo data.

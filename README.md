@@ -47,29 +47,48 @@ No database, no cloud, no vendor lock-in. The folder is the brain — but you ca
 
 A curated set of skills that ship with the plugin and know how to use the brain.
 
+**Core** (always installed)
+
 - `memory-search` — search the brain before starting work
 - `decision-check` — prevent contradictions by surfacing prior decisions
 - `nightly-consolidation` — process short-term memory, extract patterns, improve skills
-- `morning-briefing` — daily prioritized summary
-- `email-triage` — categorize and draft replies
-- `meeting-prep` — surface relationship and decision context
-- `relationship-check` — last contact, open commitments, next action
 - `project-status` — progress, blockers, next actions
-- `brain-dump-content` — turn raw thoughts into structured content
-- `content-interview` — Claude asks, you answer, drafts get made
 - `reflect` — goal-by-goal progress and course correction
 - `foresight` — forward-looking priorities
 - `signal-calibration` — the brain tuning its own signal detector
+
+**Autonomy** (core, opt-in behaviour)
+
+- `nightly-goal-pursuit` — moves goals forward while you sleep
+- `behavioral-learning` — learns how you work from what you actually do
+- `auto-outreach-queue` — drafts and queues outreach, never sends
+
+**Optional** (installed only if you connect the integration)
+
+- `meeting-prep` — surface relationship and decision context before a meeting (needs calendar)
+- `relationship-check` — last contact, open commitments, next action
+
+**Meta**
+
 - `aios-start` — one-shot install and setup
 - `aios-help` — interactive guide: tour the system, check setup progress, ask anything
+- `aios-explore` — explore what the system can do from where you are today
+- `aios-update` — update skills and hooks without touching your memory
+- `forge-skill` — build a new skill for something you do repeatedly
+
+Routine skills such as a morning briefing, email triage and content drafting are not in this
+repo yet. They depend on your own mail, calendar and tooling, so `forge-skill` is the intended
+path: describe the routine you want and the system writes the skill against your setup.
 
 Skills improve over time. When you give feedback, the nightly consolidation edits the skill itself.
 
 ---
 
-## Install — three commands, two minutes
+## Install
 
 AI-OS is a Claude Code plugin distributed directly from this GitHub repo. No Anthropic marketplace submission, no gatekeeper, no shell script. Anyone with Claude Code installed can add it as a plugin marketplace in one line.
+
+Installing takes a couple of minutes. Getting real value out of it does not. Read [what to expect](#what-to-expect) before you decide this is for you.
 
 ### Prerequisites
 
@@ -121,6 +140,29 @@ When it finishes, you have a brain. Every future Claude Code session started ins
 
 Skills write back as you use them: decisions land in `memory/decisions/`, patterns in `learning/patterns.md`, people in `knowledge/people/`. Your context compounds across sessions.
 
+## What to expect
+
+Be honest with yourself about this part.
+
+Installing is fast. The system being genuinely useful is not, because on day one your brain
+folder is empty and an empty brain has nothing to recall. Value comes from accumulated context:
+the people you have logged, the decisions you have recorded, the corrections that turned into
+patterns, the skills that got rewritten after they got something wrong.
+
+A realistic curve:
+
+- **Week 1** — you are mostly feeding it. Run `/aios-help`, log the people and projects you
+  actually work with, let the session hooks capture what happens. It feels like overhead.
+- **Week 2 to 4** — recall starts paying. It knows who people are, what you decided and what
+  you promised. `/meeting-prep` and `/reflect` stop needing setup from you.
+- **Month 2 and beyond** — compounding. Patterns get extracted from your corrections, skills
+  rewrite themselves after feedback, and the nightly run improves the system without you.
+
+The setup cost is not a flaw to be optimised away. It is the reason the thing is worth having,
+and the reason a general purpose chat window cannot do this for you.
+
+---
+
 ### Updates
 
 When a new version ships, update with:
@@ -159,7 +201,7 @@ If you prefer not to use Claude Code's plugin system, you can still install the 
   │        AI-OS Plugin     │
   │  session start/end      │
   │  skill registry         │
-  │  licensing check        │
+  │  learning loop          │
   └────────────┬────────────┘
                │
                │  reads & writes
@@ -187,6 +229,19 @@ If you prefer not to use Claude Code's plugin system, you can still install the 
 - **Operators** who live in Claude Code and want it to stop forgetting
 - **Creators** building a content practice that benefits from compound context
 - Anyone who has typed the same context into Claude more than twice and thought "there should be a better way"
+
+---
+
+## Where this comes from
+
+This repo is the base of a system that is in daily use, not a concept. It was extracted from a
+personal AI-OS that has been running and improving every night for about a year. That one has
+local additions on top of what is published here: private routines, integrations and skills that
+are specific to one person and one company, which is exactly the kind of thing you are meant to
+build on your own copy with `forge-skill`.
+
+What ships here is the part that generalises. The brain structure, the session hooks, the
+learning loop and the skills that do not assume anything about your stack.
 
 ---
 

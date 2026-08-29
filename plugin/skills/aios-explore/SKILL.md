@@ -38,8 +38,9 @@ Use this canonical grouping and copy:
 - `/meeting-prep` *(if installed)* — one-screen brief for a calendar event.
 
 **Deep work**
-- `/brain-dump-content` *(if installed)* — turn raw thoughts into structured content.
-- `/content-interview` *(if installed)* — Claude asks, you answer, a draft gets made.
+- `/reflect` — goal-by-goal progress, patterns, contradictions, course corrections.
+- `/foresight` — ranked priorities for the period ahead, with one forced drop.
+- `/forge-skill` — build a skill for a routine you repeat. This is how you add anything that does not ship here.
 
 **Autonomous**
 - `/nightly-consolidation` — process short-term memory, extract patterns, improve skills. Runs nightly if you install the scheduler.

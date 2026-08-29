@@ -108,4 +108,4 @@ Then open **http://localhost:3000** in the browser.
 - **"Is this secure?"** — The brain is local files. The plugin runs local shell scripts. No cloud. No telemetry. The licensing stub is dev-mock for now.
 - **"Can I use it with my own data today?"** — Yes. Install without `--with-demo-data` and start writing your own notes, or let Claude write them via skills.
 - **"What about updates?"** — `/aios-update` skill diffs plugin files against installed files, prompts per conflict, never touches user data in brain folders. Non-destructive by design.
-- **"Roadmap?"** — P2: complete the optional skills pack (morning-briefing, email-triage). P3: real ed25519 licensing. P4: dashboard polish + a11y. P5: marketplace submission.
+- **"Roadmap?"** — routine skills built per user via `forge-skill` rather than shipped blind. Real ed25519 licensing. Marketplace submission.

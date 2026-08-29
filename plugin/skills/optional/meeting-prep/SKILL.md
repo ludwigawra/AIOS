@@ -173,4 +173,4 @@ At the end of the brief, offer a follow-up path: "After the meeting, run `/meeti
 - If prep surfaces a contradiction with a prior decision, pair with `decision-check` before the meeting.
 - If the meeting is the landing moment for a project, pair with `project-status` so the current state is fresh.
 - After the meeting, the decisions + commitments that landed should flow into `memory/decisions/` (via the user writing or consolidation extracting from the session transcript). This skill doesn't write decisions itself.
-- `morning-briefing` usually surfaces the day's meetings first; meeting-prep drills into one.
+- `foresight` surfaces what the period ahead demands; meeting-prep drills into one event.
